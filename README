@@ -1,0 +1,50 @@
+[ Description ]
+gtk-synce is a status viewer and software manager for Windows CE devices. 
+gtk-synce is written in C and GTK+2 for Linux and *BSD. 
+The software manager installs CAB files only.  To obtain the CAB file
+either use wine to run the setup, or use a utility available at the
+synce project web site.  
+See: http://synce.sourceforge.net/synce/ 
+     http://www.winehq.com/.
+
+gtk-synce requires librapi2, also available from the synce project.
+
+[ Submitting bugs and feature requests ]
+E-mail me at techgunter@yahoo.com
+
+[ Detailed install instructions ]
+SEE INSTALL
+
+[ Installing from source package ]
+
+ $tar -xzvf gtk-synce-VERSION.tar.gz
+ $cd gtk-synce-VERSION
+ $./configure
+ $make
+ $make install (as root)
+
+[ Building a .rpm package from source ]
+
+ $tar -xzvf gtk-synce-VERSION.tar.gz
+ $cd gtk-synce-VERSION
+ $./configure
+ $./build_rpm.sh
+
+[ Installing the .rpm package ]
+
+ As root:
+ $rpm -ivh gtk-synce-VERSION.i386.rpm
+ $rpm -ivh gtk-synce-VERSION.src.rpm (optional)
+ 
+[ Building a .tgz (Slackware and others) from source ]
+
+ $tar -xzvf gtk-synce-VERSION.tar.gz
+ $cd gtk-synce-VERSION
+ $./configure
+ $./build_tgz.sh
+
+[ Installing the .tgz package ]
+
+ As root:
+ $installpkg gtk-synce-VERSION-ARCH-BUILD.tgz
+ 
