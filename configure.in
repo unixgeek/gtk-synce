@@ -28,6 +28,10 @@ AC_SUBST(GTK_LIBS)
 dnl -- Check for librapi2
 AM_PATH_LIBRAPI2
 
+dnl -- Create package building scripts. --
+AC_CONFIG_FILES(build_rpm.sh, chmod +x build_rpm.sh)
+AC_CONFIG_FILES(build_tgz.sh, chmod +x build_tgz.sh)
+
 dnl -- Create the Makefiles. --
 AC_OUTPUT([ Makefile
             src/Makefile ])

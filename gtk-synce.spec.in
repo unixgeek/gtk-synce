@@ -1,0 +1,43 @@
+Summary: Windows CE Device Manager
+Name: gtk-synce
+Version: @VERSION@
+Release: 1
+Source0: %{name}-%{version}.tar.gz
+License: GPL
+Group: Applications/Communications
+Vendor: Gunter Wambaugh <techgunter@yahoo.com>
+URL: http://gtk-synce.sourceforge.net/
+BuildRoot: %{_tmppath}/%{name}-%{version}-root
+
+%description
+gtk-synce is a status viewer and software manager for Windows CE devices.
+
+%prep
+%setup
+
+%build
+CFLAGS="$RPM_OPT_FLAGS" ./configure \
+	--prefix=%{_prefix} \
+	--disable-debug
+	
+make
+
+%install
+rm -rf $RPM_BUILD_ROOT
+
+make prefix=$RPM_BUILD_ROOT%{_prefix} \
+	install
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(-,root,root)
+
+%doc ChangeLog AUTHORS COPYING INSTALL README NEWS
+%{_bindir}/*
+%{_prefix}/share/applications/*
+%{_datadir}/pixmaps/*
+
+%changelog
+* Sat Dec 27 2003 Gunter Wambaugh <techgunter@yahoo.com>
+- Initial build.
