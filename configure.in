@@ -1,0 +1,38 @@
+dnl -- Initialize Autoconf. --
+AC_INIT(src/gtk-synce.c)
+
+dnl -- Package information. --
+PACKAGE=gtk-synce
+VERSION=0.1
+
+dnl -- Initialize Automake. --
+AM_INIT_AUTOMAKE($PACKAGE,$VERSION)
+
+dnl -- Check for a C compiler. --
+AC_PROG_CC
+
+dnl -- Check for a C Pre-processor. --
+AC_PROG_CPP
+
+dnl -- Check for a BSD compatible installer. --
+AC_PROG_INSTALL
+
+dnl -- Set the path to the icon. --
+AC_DEFINE_UNQUOTED(ICON_AND_PATH, "${prefix}/share/pixmaps/gtk-synce.png")
+
+dnl -- Check for GTK+-2.x, Glib-2.x and pkg-config. --
+PKG_CHECK_MODULES(GTK,"gtk+-2.0") 
+AC_SUBST(GTK_CFLAGS)
+AC_SUBST(GTK_LIBS)
+
+dnl -- Check for librapi2
+AM_PATH_LIBRAPI2
+
+dnl -- Create the Makefiles. --
+AC_OUTPUT([ Makefile
+            src/Makefile ])
+
+dnl -- Dislpay some information. --
+echo "--------------------------------------------------------"
+echo "Type 'make' and then (as root) 'make install'."
+echo "--------------------------------------------------------"
