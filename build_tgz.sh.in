@@ -70,7 +70,7 @@ cat $CWD/slack-desc > $TMP/package-$PACKAGE/install/slack-desc
 echo "" > doinst.sh
 echo "chown root:bin --verbose /usr/bin/gtk-synce" >> $TMP/package-$PACKAGE/install/doinst.sh
 echo "chown root:root --verbose /usr/share/pixmaps/gtk-synce.png" >> $TMP/package-$PACKAGE/install/doinst.sh
-echo "chown root:root --verbose /usr/share/gnome/apps/Utilities/gtk-synce.desktop" >> $TMP/package-$PACKAGE/install/doinst.sh
+echo "chown root:root --verbose /usr/share/applications/gtk-synce.desktop" >> $TMP/package-$PACKAGE/install/doinst.sh
 echo "chown root:root --verbose /usr/doc/$PACKAGE-$VERSION/*" >> $TMP/package-$PACKAGE/install/doinst.sh
 chmod --verbose 755 $TMP/package-$PACKAGE/install/doinst.sh
 
