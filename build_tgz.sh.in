@@ -53,9 +53,9 @@ cp -f --verbose gtk-synce.png $TMP/package-$PACKAGE/usr/share/pixmaps/
 chmod --verbose 644 $TMP/package-$PACKAGE/usr/share/pixmaps/gtk-synce.png
 
 # Copy the desktop launcher.
-mkdir -p --verbose $TMP/package-$PACKAGE/usr/share/gnome/apps/Utilities
-cp -f --verbose gtk-synce.desktop $TMP/package-$PACKAGE/usr/share/gnome/apps/Utilities/gtk-synce.desktop
-chmod --verbose 644 $TMP/package-$PACKAGE/usr/share/gnome/apps/Utilities/gtk-synce.desktop
+mkdir -p --verbose $TMP/package-$PACKAGE/usr/share/applications
+cp -f --verbose gtk-synce.desktop $TMP/package-$PACKAGE/usr/share/applications/gtk-synce.desktop
+chmod --verbose 644 $TMP/package-$PACKAGE/usr/share/applications/gtk-synce.desktop
 
 # Copy the GNU Documents.
 mkdir -p --verbose $TMP/package-$PACKAGE/usr/doc/$PACKAGE-$VERSION

@@ -6,14 +6,14 @@
 # customary to leave one space after the ':'.
 
             |-----handy-ruler------------------------------------------------------|
-gtk-splitter: gtk-synce (A GTK+ synce device utility)
-gtk-splitter: 
-gtk-splitter: gtk-synce is a status viewer and software manager for Windows CE 
-gtk-splitter: devices.
-gtk-splitter:
-gtk-splitter: Written by Gunter Wambaugh
-gtk-splitter:
-gtk-splitter:
-gtk-splitter:
-gtk-splitter:
-gtk-splitter:
+gtk-synce: gtk-synce (A GTK+ synce device utility)
+gtk-synce: 
+gtk-synce: gtk-synce is a status viewer and software manager for Windows CE 
+gtk-synce: devices.
+gtk-synce: 
+gtk-synce: Written by Gunter Wambaugh
+gtk-synce: 
+gtk-synce: 
+gtk-synce: 
+gtk-synce: 
+gtk-synce: 
