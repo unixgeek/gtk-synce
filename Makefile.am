@@ -2,7 +2,11 @@ SUBDIRS = src
 
 EXTRA_DIST = gtk-synce.desktop	\
              gtk-synce.png	\
-             depcomp
+             depcomp		\
+             build_rpm.sh	\
+             gtk-synce.spec	\
+             build_tgz.sh	\
+             slack-desc
 
 gnome_menudir = $(prefix)/share/applications
 gnome_menu_DATA = gtk-synce.desktop

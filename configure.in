@@ -34,6 +34,7 @@ AC_CONFIG_FILES(build_tgz.sh, chmod +x build_tgz.sh)
 
 dnl -- Create the Makefiles. --
 AC_OUTPUT([ Makefile
+            gtk-synce.spec
             src/Makefile ])
 
 dnl -- Dislpay some information. --
